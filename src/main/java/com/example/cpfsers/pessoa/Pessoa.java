@@ -16,6 +16,9 @@ public class Pessoa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    public Pessoa() {
+    }
+
     public Pessoa(String nome, String cpf, int idade, int id) {
         this.nome = nome;
         this.cpf = cpf;

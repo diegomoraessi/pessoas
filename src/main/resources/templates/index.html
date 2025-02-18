@@ -12,13 +12,13 @@
 
     <h1>Pessoa</h1>
 
-    <form class="row g-3" th:action="@{/salvar}" th:object="${pessoa}" method="post">
+    <form class="row g-3" th:action="@{/pessoa/salvar}" th:object="${pessoa}" method="post">
         <div class="container">
             <h2>Insira as suas informações</h2>
         </div>
         <div class="col-auto">
             <label for="inputPassword2" class="visually-hidden">Nome</label>
-            <input type="text" th:field="*{name}" class="form-control" id="nome" placeholder="Nome">
+            <input type="text" th:field="*{nome}" class="form-control" id="nome" placeholder="Nome">
         </div>
         <div class="col-auto">
             <label for="inputPassword2" class="visually-hidden">CPF</label>
@@ -26,7 +26,7 @@
         </div>
         <div class="col-auto">
             <label for="inputPassword2" class="visually-hidden">Idade</label>
-            <input type="text" class="form-control" id="idade" placeholder="Idade">
+            <input type="number" class="form-control" id="idade" placeholder="Idade">
         </div>
         <div class="col-auto">
             <button type="submit" class="btn btn-success">Enviar</button>

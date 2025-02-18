@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,8 +16,8 @@ public class PessoaController {
     @Autowired
     public PessoaService pessoaService;
 
-    @PostMapping()
-    public PessoaDTO save(PessoaDTO pessoaDTO) {
+    @PostMapping("/salvar")
+    public PessoaDTO save(@ModelAttribute PessoaDTO pessoaDTO) {
         return pessoaService.save(pessoaDTO);
     }
 

@@ -13,6 +13,9 @@ public class PessoaDTO {
         this.id = id;
     }
 
+    public PessoaDTO() {
+    }
+
     public String getNome() {
         return nome;
     }
